@@ -8,7 +8,7 @@ from PyQt5.QtCore import Qt
 class InterGrafo(QMainWindow):
     def __init__(self, *args, **kwargs):
         super(InterGrafo, self).__init__(*args, **kwargs)
-        self.setWindowTitle("Logistik Nexus")
+        self.setWindowTitle("NexoBusiness")
         self.setGeometry(75, 40, 1210, 675)
         self.setWindowIcon(QIcon("Icono/icoPrincipal.png"))
         self.setStyleSheet("background-color: #f8f9fa;")
