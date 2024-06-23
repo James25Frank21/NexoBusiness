@@ -11,38 +11,32 @@ class InterGrafo(QMainWindow):
         self.setWindowTitle("Logistik Nexus")
         self.setGeometry(75, 40, 1210, 675)
         self.setWindowIcon(QIcon("Icono/icoPrincipal.png"))
-        self.setStyleSheet("background-color: #F7F7F7;")
+        self.setStyleSheet("background-color: #f8f9fa;")
         self.init_ui()
 
     def init_ui(self):
 
         self.label_Valor1 = QLabel(self)
-        self.label_Valor1.setGeometry(40, 27, 180, 15)
+        self.label_Valor1.setGeometry(40, 27, 210, 15)
         self.label_Valor1.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.label_Valor1.setText("Seleccionar región de interés")
+        self.label_Valor1.setStyleSheet("color:#343a40; font-size: 12px; font-weight: bold;")
+        self.label_Valor1.setText("Selecciona tu región de interés")
 
-        self.valor4Y_input = QLineEdit(self)
-        self.valor4Y_input.setGeometry(290, 175, 40, 20)
+        self.boton_Valor1 = QPushButton(self)
+        self.boton_Valor1.setGeometry(80, 50, 80, 20)
+        self.boton_Valor1.setText("SELECCIONAR")
+        #color del borde
+        self.boton_Valor1.setStyleSheet("background-color: #0077B6 ; color: #FFFFFF;border-radius: 5px;")
 
 
         self.SalidaGrafica = QWidget(self)
-        self.SalidaGrafica.setGeometry(415, 10, 380, 290)
-        self.SalidaGrafica.setStyleSheet("border: 1px solid black; background-color: #7FFF00;")
+        self.SalidaGrafica.setGeometry(40, 210, 500, 400)
+        self.SalidaGrafica.setStyleSheet("border: 1px solid black; background-color: #FFFFFF;border-radius: 10px;")
 
-        layout = QVBoxLayout(self.SalidaGrafica)
-        self.SalidaGrafica.setLayout(layout)
-
-        self.linea = QLabel(self)
-        self.linea.setGeometry(20, 320, 1170, 1)
-        self.linea.setStyleSheet("background-color: red;")
 
         self.SalidaMap = QWidget(self)
-        self.SalidaMap.setGeometry(20, 370, 380, 290)
-        self.SalidaMap.setStyleSheet("border: 1px solid black; background-color: #7FFF00;")
-
-        layout1 = QVBoxLayout(self.SalidaMap)
-        self.SalidaMap.setLayout(layout1)
-
+        self.SalidaMap.setGeometry(670, 210, 500, 400)
+        self.SalidaMap.setStyleSheet("border: 1px solid black; background-color: #FFFFFF;border-radius: 10px;")
 
 
 
