@@ -3,6 +3,7 @@
 ## Descripción general
 NexoBusiness es una aplicación diseñada para ayudar a los negocios a encontrar la mejor ubicación para sus operaciones, dependiendo de la región de interés. Utiliza una variedad de datos geográficos y de mercado para analizar factores clave como:
 
+(Puntos por realizar)
 - Densidad de población y características demográficas de la zona
 - Accesibilidad a vías de transporte, puertos, aeropuertos, etc.
 - Proximidad a proveedores, clientes y competencia
