@@ -1,8 +1,8 @@
 import sys
-from PyQt5.QtGui import QIcon, QPixmap
+from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QPushButton, QLabel, QWidget,
-    QVBoxLayout, QListWidget, QDialog
+    QVBoxLayout, QListWidget, QDialog, QFormLayout, QLineEdit
 )
 from PyQt5.QtCore import Qt
 
@@ -10,23 +10,22 @@ from PyQt5.QtCore import Qt
 class CitySelectorDialog(QDialog):
     def __init__(self, parent=None):
         super(CitySelectorDialog, self).__init__(parent)
-        self.setWindowTitle("Selecciona una Ciudad")
-        self.setGeometry(100, 100, 320, 200)
+        self.setWindowTitle("Selecciona una Región")
+        self.setGeometry(100, 100, 330, 200)
 
         self.layout = QVBoxLayout(self)
 
         self.city_list_widget = QListWidget(self)
-        self.city_list_widget.addItems([
-            "TV17-Urb. Las Quintanas 4ta. Etapa - Miraflores - Los J",
-            "TV18-La Intendencia - El Molino",
-            "TV19-Urb. Daniel Hoyle",
-            "TV28-Urb. Santa Teresa del Avila",
-            "TV41-Urb. Pay Pay - Leticia",
-            "TV45-Urb. Huerta Grande - Barrio Ex Camal Municipal",
-            "TV46-Urb. Las Quintanas 2da Etapa",
-            "TV47-Urb. Las Quintanas 3ra. Etapa",
-            "TV48-Urb. Las Quintanas 4ta Etapa - Parte Urb. Los Jard"
-        ])  # Añadir ciudades aquí
+        self.city_list_widget.addItems(["TV17-Urb. Las Quintanas 4ta. Etapa - Miraflores - Los J",
+                                        "TV18-La Intendencia - El Molino",
+                                        "TV19-Urb. Daniel Hoyle",
+                                        "TV28-Urb. Santa Teresa del Avila",
+                                        "TV41-Urb. Pay Pay - Leticia",
+                                        "TV45-Urb. Huerta Grande - Barrio Ex Camal Municipal",
+                                        "TV46-Urb. Las Quintanas 2da Etapa",
+                                        "TV47-Urb. Las Quintanas 3ra. Etapa",
+                                        "TV48-Urb. Las Quintanas 4ta Etapa - Parte Urb. Los Jard"
+                                        ])  # Añadir ciudades aquí
         self.layout.addWidget(self.city_list_widget)
 
         self.city_list_widget.itemClicked.connect(self.select_city)
@@ -66,15 +65,11 @@ class InterGrafo(QMainWindow):
 
         self.SalidaGrafica = QWidget(self)
         self.SalidaGrafica.setGeometry(40, 210, 500, 400)
-        self.SalidaGrafica.setStyleSheet("border: 1px solid black; background-color: #083C82;border-radius: 10px;")
+        self.SalidaGrafica.setStyleSheet("border: 1px solid black; background-color: #FFFFFF;border-radius: 10px;")
 
         self.SalidaMap = QWidget(self)
         self.SalidaMap.setGeometry(670, 210, 500, 400)
         self.SalidaMap.setStyleSheet("border: 1px solid black; background-color: #FFFFFF;border-radius: 10px;")
-
-        self.image_label = QLabel(self.SalidaGrafica)  # Label para mostrar la imagen
-        self.image_label.setGeometry(10, 10, 480, 380)  # Ajustar según el tamaño del widget
-        self.image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
     def open_city_selector(self):
         dialog = CitySelectorDialog(self)
@@ -83,15 +78,13 @@ class InterGrafo(QMainWindow):
             self.display_city(selected_city)
 
     def display_city(self, city):
-        # Construir la ruta de la imagen
-        image_path = f"imagenes/{city}.png"  # Ajustar el formato según el nombre y la extensión de las imágenes
-
-        # Cargar y mostrar la imagen
-        pixmap = QPixmap(image_path)
-        if not pixmap.isNull():
-            self.image_label.setPixmap(pixmap.scaled(470, 370, Qt.AspectRatioMode.KeepAspectRatio))
-        else:
-            self.image_label.setText("Imagen no disponible")  # Mensaje en caso de error
+        # Aquí puedes actualizar la salida gráfica con la ciudad seleccionada.
+        # Esto es solo un ejemplo de cómo podrías mostrar la ciudad seleccionada.
+        label = QLabel(f"Ciudad Seleccionada: {city}", self.SalidaGrafica)
+        label.setGeometry(10, 10, 480, 30)
+        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        label.setStyleSheet("font-size: 16px; font-weight: bold; color: #343a40;")
+        label.show()
 
 
 def main():
