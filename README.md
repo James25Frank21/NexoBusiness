@@ -1,8 +1,9 @@
 # NexoBusiness: Herramienta de análisis espacial para la mejor ubicación de tu negocio
 
 ## Descripción general
-Logistik-Nexus es una aplicación diseñada para ayudar a los negocios a encontrar la mejor ubicación para sus operaciones, dependiendo de la región de interés. Utiliza una variedad de datos geográficos y de mercado para analizar factores clave como:
+NexoBusiness es una aplicación diseñada para ayudar a los negocios a encontrar la mejor ubicación para sus operaciones, dependiendo de la región de interés. Utiliza una variedad de datos geográficos y de mercado para analizar factores clave como:
 
+(Puntos por realizar)
 - Densidad de población y características demográficas de la zona
 - Accesibilidad a vías de transporte, puertos, aeropuertos, etc.
 - Proximidad a proveedores, clientes y competencia
@@ -10,9 +11,9 @@ Logistik-Nexus es una aplicación diseñada para ayudar a los negocios a encontr
 - Incentivos fiscales y regulaciones locales
 
 ## Características principales
-- **Análisis espacial avanzado**: Logistik-Nexus genera mapas de calor y modelos predictivos que muestran las áreas más óptimas para ubicar un negocio dentro de la región seleccionada.
+- **Análisis espacial avanzado**: NexoBusiness genera mapas de calor y modelos predictivos que muestran las áreas más óptimas para ubicar un negocio dentro de la región seleccionada.#(PROXIMAMENTE)
 - **Personalización**: La aplicación es altamente personalizable y puede adaptarse a las necesidades específicas de cada empresa.
-- **Versatilidad**: Logistik-Nexus es una herramienta valiosa para diversos sectores, desde la logística y el comercio minorista hasta la industria y los servicios.
+- **Versatilidad**: NexoBusiness es una herramienta valiosa para diversos sectores, desde la logística y el comercio minorista hasta la industria y los servicios.
 
 ## Beneficios para tu negocio
 - Toma de decisiones informadas sobre la ubicación de tu negocio
